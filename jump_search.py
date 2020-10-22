@@ -53,6 +53,6 @@ def jumpSearch( arr , x , n ):
 if __name__ == "__main__":
     arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
     x = 55
-    n = 16
+    n = len(arr)
     jump = jumpSearch(arr, x, n)
     print(jump)
