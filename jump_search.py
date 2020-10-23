@@ -22,6 +22,35 @@ if __name__ == "__main__":
     print(jump)
 '''
 
+# my answer
+import math
+def jump_search(arr, x):
+    length = len(arr)
+    step = round(math.sqrt(length))
+    i = 0
+    if arr[i] == x:
+        return i
+    else:
+        while arr[i] < x:
+            if i > length:
+                return -1
+            else:
+                while arr[i] < x:
+                    i += 1
+                    if arr[i] == x:
+                        return i
+            i += step
+        
+if __name__ == "__main__":
+    arr = [1,2,3,4,5,6,7,8,9,10]
+    x = 8
+    jump = jump_search(arr, x)
+    print(jump)
+    
+# # 배열에 없는 수가 x로 주어졌을 때 에러남 -> 'return -1'로 수정
+    
+    
+
 # answer
 def jumpSearch( arr , x , n ): 
       
