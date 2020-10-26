@@ -10,6 +10,64 @@ x     ==> Element to be searched
 lo    ==> Starting index in arr[]
 hi    ==> Ending index in arr[]
 '''
+
+
+
+
+'''
+my answer
+'''
+
+
+def interpolation_search(arr, x):
+    length = len(arr)
+    low = 0
+    high = length - 1
+    
+    while arr[low] <= x and arr[high] >= x and low <= high:
+        if arr[low] == arr[high]:
+            if arr[low] == x:
+                return low
+            else:
+                return -1
+            
+        
+        if arr[low] == x:
+            return low
+        elif arr[high] == x:
+            return high
+        else:
+            low += 1
+            high -= 1
+            
+        if low >= high:
+            return -1
+        
+    return -1
+        
+            
+            
+        
+    
+    
+
+if __name__ == "__main__":
+    arr = [1,2,3,4,5,6,7,8,9,10]
+    x = 11
+    inter = interpolation_search(arr, x)
+    print(inter)
+
+
+
+
+
+
+
+'''
+answer
+'''
+
+
 # Python program to implement interpolation search 
   
 # If x is present in arr[0..n-1], then returns 
