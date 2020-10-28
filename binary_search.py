@@ -86,8 +86,35 @@ if __name__ == "__main__":
     
     
     
+'''
+my answer4
+'''
+
+def binary_search(arr, left, right, x):
+    while left < right and arr[left] <= x and arr[right] >= x:
+        if arr[left] == x:
+            return left
+        elif arr[right] == x:
+            return right
+        else:
+            left += 1
+            right -= 1
+            return binary_search(arr, left, right, x)
+    return -1
+        
+if __name__ == "__main__":
+    arr = [1,2,3,4,5,6,7,8,9,10]
+    left = 0
+    right = len(arr) - 1
+    x = 3
+    bina = binary_search(arr, left, right, x)
+    print(bina)
     
-############################################################################    
+    
+    
+############################################################################
+############################################################################
+############################################################################   
     
     
     
